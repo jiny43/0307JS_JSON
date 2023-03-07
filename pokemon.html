@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>Random Pokémon Generator</title>
+  </head>
+  <body>
+    <h1>Random Pokémon Generator</h1>
+    <button>Generate Pokémon</button>
+    <br>
+    <img src="" alt="Random Pokémon">
+
+    <script>
+const button = document.querySelector('button'); 
+const img = document.querySelector('img');
+const apiUrl = 'https://pokeapi.co/api/v2/pokemon/';
+button.addEventListener('click', () => {
+  const randomId = Math.floor(Math.random() * 1200) + 1;
+  const url = `${apiUrl}${randomId}`;
+//url= 'https://pokeapi.co/api/v2/pokemon/' + randomId;
+  fetch(url)
+    .then(response => response.json())
+    .then(data => {
+      const imageUrl = data.sprites.front_default;
+      img.setAttribute('src', imageUrl);
+    })
+    .catch(error => console.log(error));
+});
+
+const imageUrl = data.sprites.front_default;
+img.setAttribute('src', imageUrl);
+    </script>
+  </body>
+</html>
