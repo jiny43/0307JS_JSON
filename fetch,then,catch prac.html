@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    
+</body>
+</html>
+<script>
+    //tatch <mdn> 이해하기
+    //fetch("http://example.com/movies.json")
+    // .then((response) => response.json())
+    //.then((data) => console.log(data));
+    // fetch()의 인수로 가져오려는 리소스 경로를 취하고
+    //json 을 직접 반환하지 않고 대신 객체로 해결되는 약속을 반환
+    //객체에서 json 본문 콘텐츠를 추출하기 위해 json()
+    //객체 response 는  
+    
+
+    //기본 가져오기 요청
+const apiUrl = 'https://pokeapi.co/api/v2/pokemon/';
+   fetch(apiUrl)
+  .then((response) => response.json())
+  .then((data) => console.log(data));
+
+
+
+
+
+
+ 
+</script>
